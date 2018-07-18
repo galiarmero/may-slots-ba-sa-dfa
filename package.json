@@ -1,0 +1,32 @@
+{
+  "name": "msbsdfa-api",
+  "version": "1.0.0",
+  "description": "API for may-slots-ba-sa-dfa",
+  "main": "index.js",
+  "scripts": {
+    "test": "standard && tap test/*.test.js test/*/*.test.js test/*/*/*.test.js",
+    "start": "fastify start app.js",
+    "dev": "fastify start -l info -P app.js",
+    "lint": "standard --fix"
+  },
+  "keywords": [
+    "fastify",
+    "api",
+    "graphql",
+    "mongodb",
+    "dfa",
+    "passport"
+  ],
+  "author": "Gali Armero",
+  "license": "MIT",
+  "dependencies": {
+    "fastify": "^1.6.0",
+    "fastify-plugin": "^1.1.2",
+    "fastify-autoload": "^0.4.0",
+    "fastify-cli": "^0.17.0"
+  },
+  "devDependencies": {
+    "standard": "^11.0.1",
+    "tap": "^12.0.0"
+  }
+}
