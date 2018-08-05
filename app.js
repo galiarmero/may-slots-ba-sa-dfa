@@ -4,18 +4,24 @@ const path = require('path')
 const AutoLoad = require('fastify-autoload')
 
 module.exports = function (fastify, opts, next) {
-  // Place here your custom code!
+  // Adds some useful utilities to Fastify
+  fastify.register(require('fastify-sensible'))
 
-  // Do not touch the following lines
+  // MongoDB connector
+  fastify.register(require('fastify-mongodb'), {
+    forceClose: true,
+    url: 'mongodb://localhost:27017/',
+    database: 'dfa_pas'
+  })
 
-  // This loads all plugins defined in plugins
+  // Loads all plugins defined in plugins
   // those should be support plugins that are reused
   // through your application
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'plugins')
   })
 
-  // This loads all plugins defined in services
+  // Loads all plugins defined in services
   // define your routes in one of these
   fastify.register(AutoLoad, {
     dir: path.join(__dirname, 'services')

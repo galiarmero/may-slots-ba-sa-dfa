@@ -21,9 +21,11 @@
   "license": "MIT",
   "dependencies": {
     "fastify": "^1.6.0",
-    "fastify-plugin": "^1.1.2",
     "fastify-autoload": "^0.4.0",
-    "fastify-cli": "^0.17.0"
+    "fastify-cli": "^0.17.0",
+    "fastify-mongodb": "^0.8.2",
+    "fastify-plugin": "^1.1.2",
+    "fastify-sensible": "^0.2.0"
   },
   "devDependencies": {
     "standard": "^11.0.1",
